@@ -25,6 +25,15 @@ def button_equal():
     b = e.get()
     e.delete(0, END)
     e.insert(0, g_a + int(b))
+    
+def button_sub():
+    return
+
+def button_mul():
+    return
+
+def button_div():
+    return
 
 
 button_1 = Button(root, text="1", padx=40, pady=20, command=lambda: button_click(1))
@@ -39,9 +48,9 @@ button_9 = Button(root, text="9", padx=40, pady=20, command=lambda: button_click
 button_0 = Button(root, text="0", padx=40, pady=20, command=lambda: button_click(0))
 
 button_add = Button(text="+", padx=40, pady=20, command=button_add)
-button_sub = Button(text="-", padx=40, pady=20, command=lambda: button_click(1))
-button_mul = Button(text="x", padx=40, pady=20, command=lambda: button_click(1))
-button_div = Button(text="/", padx=40, pady=20, command=lambda: button_click(1))
+button_sub = Button(text="-", padx=40, pady=20, command=button_sub)
+button_mul = Button(text="x", padx=40, pady=20, command=button_mul)
+button_div = Button(text="/", padx=40, pady=20, command=button_div)
 
 
 button_equal = Button(text="=", padx=40, pady=20, command=button_equal)
