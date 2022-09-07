@@ -1,12 +1,15 @@
 from _ast import Lambda
 from tkinter import *
+from turtle import bgcolor
 
 # Create the root widget (= the main window for the program) and give it a title
 root = Tk()
 root.title("My Calculator")
 
 # settings for the main window
-e = Entry(root, width=35, borderwidth=5)
+e = Entry(root, width=35, borderwidth=5, background="#30038a")
+root.configure(background="#3e41de")
+root.geometry("425x330")
 
 '''click button definition:
 save the current number, delete what is in the field
@@ -69,27 +72,28 @@ def button_div():
 
 # buttons variable initialization
 #lambda function allow us to send multiple data through the callback function
-button_1 = Button(root, text="1", padx=40, pady=20, command=lambda: button_click(1))
-button_2 = Button(root, text="2", padx=40, pady=20, command=lambda: button_click(2))
-button_3 = Button(root, text="3", padx=40, pady=20, command=lambda: button_click(3))
-button_4 = Button(root, text="4", padx=40, pady=20, command=lambda: button_click(4))
-button_5 = Button(root, text="5", padx=40, pady=20, command=lambda: button_click(5))
-button_6 = Button(root, text="6", padx=40, pady=20, command=lambda: button_click(6))
-button_7 = Button(root, text="7", padx=40, pady=20, command=lambda: button_click(7))
-button_8 = Button(root, text="8", padx=40, pady=20, command=lambda: button_click(8))
-button_9 = Button(root, text="9", padx=40, pady=20, command=lambda: button_click(9))
-button_0 = Button(root, text="0", padx=40, pady=20, command=lambda: button_click(0))
+button_1 = Button(root, text="1", padx=30, pady=20, command=lambda: button_click(1))
+button_2 = Button(root, text="2", padx=30, pady=20, command=lambda: button_click(2))
+button_3 = Button(root, text="3", padx=30, pady=20, command=lambda: button_click(3))
+button_4 = Button(root, text="4", padx=30, pady=20, command=lambda: button_click(4))
+button_5 = Button(root, text="5", padx=30, pady=20, command=lambda: button_click(5))
+button_6 = Button(root, text="6", padx=30, pady=20, command=lambda: button_click(6))
+button_7 = Button(root, text="7", padx=30, pady=20, command=lambda: button_click(7))
+button_8 = Button(root, text="8", padx=30, pady=20, command=lambda: button_click(8))
+button_9 = Button(root, text="9", padx=30, pady=20, command=lambda: button_click(9))
+button_0 = Button(root, text="0", padx=30, pady=20, command=lambda: button_click(0))
 
-button_add = Button(text="+", padx=40, pady=20, command=button_add)
-button_sub = Button(text="-", padx=40, pady=20, command=button_sub)
-button_mul = Button(text="x", padx=40, pady=20, command=button_mul)
-button_div = Button(text="/", padx=40, pady=20, command=button_div)
+button_add = Button(text="+", padx=30, pady=20, command=button_add)
+button_sub = Button(text="-", padx=30, pady=20, command=button_sub)
+button_mul = Button(text="x", padx=30, pady=20, command=button_mul)
+button_div = Button(text="/", padx=30, pady=20, command=button_div)
 
-button_equal = Button(text="=", padx=40, pady=20, command=button_equal)
-button_clear = Button(text="C", padx=40, pady=20, command=button_clear)
+button_equal = Button(text="=", padx=30, pady=20, command=button_equal)
+button_clear = Button(text="C", padx=30, pady=20, command=button_clear)
 
 # position of the calculators'screen
 e.grid(row=0, column=0, columnspan=5, padx=5, pady=10)
+
 # buttons position in the grid
 button_1.grid(row=3, column=0)
 button_2.grid(row=3, column=1)
