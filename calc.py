@@ -22,8 +22,12 @@ def click_button(touche):
 		return
 
 	global expression
-	expression += str(touche)
-	equation.set(expression)
+	if len(expression) < 15:
+		expression += str(touche)
+		equation.set(expression)
+	else:
+		equation.set("Erreur")
+		expression = ""
 	return 
 
 def calculer():
