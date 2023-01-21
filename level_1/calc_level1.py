@@ -20,7 +20,6 @@ def click_button(touche):
 	if touche == "=":
 		calculer()
 		return
-
 # que se passe t-il si on entre un trop grand nombre de chiffres ? 
 	global expression
 	expression += str(touche)
@@ -48,6 +47,7 @@ resultat = Label(main_window, bg="#3e41de", fg="#FFF", textvariable=equation, he
 resultat.grid(columnspan=3)
 
 # Création des boutons avec les paramètres de texte, hauteur, largeur, couleur de fonds, couleur d'écriture, épaisseur de bordure et type de relief
+# Exemples de codes couleur sur https://htmlcolorcodes.com/fr/
 button_1 = Label(main_window, text ="1", height=4, width=5, bg="#211180", fg="#ffffff", borderwidth="1", relief="raised")
 button_2 = Label(main_window, text ="2", height=4, width=5, bg="#211180", fg="#ffffff", borderwidth="1", relief="raised")
 button_3 = Label(main_window, text ="3", height=4, width=5, bg="#211180", fg="#ffffff", borderwidth="1", relief="raised")
